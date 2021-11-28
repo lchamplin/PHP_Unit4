@@ -23,8 +23,10 @@
         echo "<table border='1'>
         <tr>
         <th>Product</th>
+        <th>Image</th>
         <th>Quantity</th>
         <th>Price</th>
+        <th>Inactive?</th>
         </tr>";
 
         while($row = mysqli_fetch_array($products))
@@ -34,7 +36,12 @@
         echo "<td>" . $row['image_name'] . "</td>";
         echo "<td>" . $row['in_stock'] . "</td>";
         echo "<td>" . $row['price'] . "</td>";
-        echo "<td>" . $row['inactive'] . "</td>";
+        if ($row['inactive']==1){
+                echo "<td>" . "yes ". "</td>";
+        }
+        else{
+                echo "<td>" . "</td>";
+        }
         echo "</tr>";
         }
         echo "</table>";
