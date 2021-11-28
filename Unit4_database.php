@@ -149,10 +149,11 @@ function getProductTable($conn) {
 
 function getProductTableHTML($conn){
         $products = getProductTable
+        $table = ""
 
-        echo "<br>";
-        echo "<h3> Products </h3>";
-        echo "<table border='1'>
+        $table = $table . "<br>";
+        $table = $table .  "<h3> Products </h3>";
+        $table = $table .  "<table border='1'>
         <tr>
         <th>Product</th>
         <th>Image</th>
@@ -163,20 +164,21 @@ function getProductTableHTML($conn){
 
         while($row = mysqli_fetch_array($products))
         {
-        echo "<tr>";
-        echo "<td>" . $row['product_name'] . "</td>";
-        echo "<td>" . $row['image_name'] . "</td>";
-        echo "<td>" . $row['in_stock'] . "</td>";
-        echo "<td>" . $row['price'] . "</td>";
+                $table = $table .  "<tr>";
+                $table = $table .  "<td>" . $row['product_name'] . "</td>";
+                $table = $table .  "<td>" . $row['image_name'] . "</td>";
+                $table = $table .  "<td>" . $row['in_stock'] . "</td>";
+                $table = $table .  "<td>" . $row['price'] . "</td>";
         if ($row['inactive']==1){
-                echo "<td>" . "yes ". "</td>";
+                $table = $table .  "<td>" . "yes ". "</td>";
         }
         else{
-                echo "<td>" . "</td>";
+                $table = $table .  "<td>" . "</td>";
         }
-        echo "</tr>";
+        $table = $table .  "</tr>";
         }
-        echo "</table>";
+        $table = $table .  "</table>";
+        return $table
 }
 
 ?> 

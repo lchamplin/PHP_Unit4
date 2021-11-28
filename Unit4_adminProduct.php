@@ -16,7 +16,7 @@
   <div class="column">
           <?php
         $conn = getConnection();
-        getProductTableHTML($conn);
+        echo getProductTableHTML($conn);
         ?>
   </div>
 
