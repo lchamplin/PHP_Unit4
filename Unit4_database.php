@@ -148,7 +148,7 @@ function getProductTable($conn) {
 }
 
 function getProductTableHTML($conn){
-        $products = getProductTable();
+        $products = getProductTable($conn);
         $table = ""
 
         $table = $table . "<br>";
