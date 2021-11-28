@@ -26,7 +26,13 @@ $(document).ready(function(){
                 var image = $("#image").val();
                 var quantity = $("#quantity").val();
                 var price = $("#price").val();
-                var inactive = $("#inactive").val();
+                var inactive = $("#inactive").attr('checked');
+                if (inactive){
+                        inactive = 1;
+                }
+                else{
+                        inactive = 0;
+                }
                 if (name == '') {
                         alert("Please provide product name");
                         return "";
