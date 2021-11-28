@@ -15,8 +15,8 @@
 <div class="row">
   <div class="column">
           <?php
-        // $conn = getConnection();
-        // getProductTableHTML($conn);
+        $conn = getConnection();
+        getProductTableHTML($conn);
         ?>
   </div>
 
@@ -24,11 +24,11 @@
 <form>
    <fieldset class="product">
     <legend>Product Info</legend>
-                <!-- Product Name: * <input type="text" name="name" id="name" required><br>
+                Product Name: * <input type="text" name="name" id="name" required><br>
                 Product Image: * <input type="text" name="image" id="image" required><br>
                 Quantity: <input type="number" name="quantity" id="quantity" min=0 value=0><br>
                 Price:  <input type="number" name="price" id="price" min=0 value=0><br>
-                Make Inactive: <input type="checkbox" name="inactive" id="inactive"><br> -->
+                Make Inactive: <input type="checkbox" name="inactive" id="inactive"><br>
         </fieldset>
 </form>
                 <span>

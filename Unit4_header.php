@@ -17,7 +17,7 @@
         <div class="topnav">
                 <a href="Unit4_store.php">Store</a>
                 <a href="Unit4_order_entry.php">Order Entry</a>
-                <a href="Unit4_adminProduct.php">Products</a>
+                <!-- <a href="Unit4_adminProduct.php">Products</a> -->
                 <a id="admin" href="Unit4_admin.php">Admin</a>
         </div>
 </nav>
