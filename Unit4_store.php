@@ -39,7 +39,7 @@
                         <?php $Product = getProducts(getConnection()); ?>
                         <?php if ($Product): ?>
                         <?php foreach($Product as $row): ?>
-                                <option value = <?= $row['id']?> data-image="<?= $row['image_name'] ?>" data-qty="<?= $row['in_stock'] ?>" <?php if($row['inactive']){ echo "disabled" } ?>> <?= $row['product_name'] ?> - <?= $row['price'] ?> </option>
+                                <option value = <?= $row['id']?> data-image="<?= $row['image_name'] ?>" data-qty="<?= $row['in_stock'] ?>" <?php if($row['inactive']==1){ echo "disabled"; } ?> > <?= $row['product_name'] ?> - <?= $row['price'] ?> </option>
                         <?php endforeach?>
                         <?php endif?>
                         </select>
