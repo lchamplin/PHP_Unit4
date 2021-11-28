@@ -30,7 +30,7 @@
                 Price:  <input type="number" name="price" id="price" min=0 value=0><br>
                 Make Inactive: <input type="checkbox" name="inactive" id="inactive"><br>
         </fieldset>
-        <form>
+</form>
                 <span>
                         <button id="add">ADD<button>
                         <button id="update">UPDATE<button>
