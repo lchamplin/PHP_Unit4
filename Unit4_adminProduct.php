@@ -18,6 +18,7 @@
         $conn = getConnection();
         echo getProductTableHTML($conn);
         ?>
+        <br>
   </div>
 
   <div class="column2">
@@ -30,12 +31,12 @@
                 Price:  <input type="number" name="price" id="price" min=0 value=0><br>
                 Make Inactive: <input type="checkbox" name="inactive" id="inactive"><br>
         </fieldset>
+</form>
                 <span>
                         <button id="add">ADD<button>
                         <button id="update">UPDATE<button>
                         <button id="delete">DELETE<button>
                 </span>
-</form>
   </div>
 </div> 
 </body>
