@@ -29,6 +29,7 @@ footer{
         border: 0.25vw red solid;
         text-align: center;
         justify-content: center;
+        bottom: 0%;
 }
 
 #delete{
