@@ -12,6 +12,12 @@ $image=$_POST['image'];
 $quantity=$_POST['quantity'];
 $price=$_POST['price'];
 $inactive=$_POST['inactive'];
+if($inactive = 'on'){
+        $inactive = 1
+}
+else{
+        $inactive = 0
+}
 $action=$_POST['action'];
 
 if($action=="add"){

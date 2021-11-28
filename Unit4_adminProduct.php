@@ -32,7 +32,7 @@
                 Product Image: * <input type="text" name="image" id="image" required><br>
                 Quantity: <input type="number" name="quantity" id="quantity" min=0><br>
                 Price:  <input type="number" name="price" id="price" min=0><br>
-                Make Inactive: <input type="checkbox" name="inactive" id="inactive"><br>
+                Make Inactive: <input type="checkbox" name="inactive" id="inactive" value="off"><br>
         </fieldset>
                 <span>
                         <button id="add" type="submit">ADD</button>
