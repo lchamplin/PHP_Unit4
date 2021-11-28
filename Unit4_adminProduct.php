@@ -13,14 +13,14 @@
 </head>
 <body>
 <div class="row">
-  <div class="column">
+  <div class="column1">
           <?php
         $conn = getConnection();
         echo getProductTableHTML($conn);
         ?>
   </div>
 
-  <div class="column">
+  <div class="column2">
 <form>
    <fieldset class="product">
     <legend>Product Info</legend>
