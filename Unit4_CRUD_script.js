@@ -3,7 +3,7 @@ $(document).ready(function(){
 
         $("#add").click(function(e){
                 e.preventDefault();
-                dataString = checkFields()+"&action='add'";
+                dataString = checkFields()+"&action=add";
                 if(dataString!=""){
                         console.log("ajax reached", dataString)
                         $.ajax({
