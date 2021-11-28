@@ -15,10 +15,10 @@ $inactive=$_POST['inactive'];
 $action=$_POST['action'];
 
 if($action=="add"){
-        addProduct($conn, $name, $image, $price, $quantity, $inactive)
-        echo "Product added"
+        addProduct($conn, $name, $image, $price, $quantity, $inactive);
+        echo "Product added";
 }
-echo "Error"
+echo "Error";
 
 
 
