@@ -1,11 +1,11 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', True);
-?>
-<?php
+
 include 'Unit4_database.php';
 
 $conn = getConnection();
+echo "got connection"
 //Fetching Values from URL
 $name=$_POST['name'];
 $image=$_POST['image'];
