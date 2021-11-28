@@ -6,16 +6,10 @@
       .column {
         float: left;
         width: 50%;
-        padding: 10px;
-        height: 300px; /* Should be removed. Only for demonstration */
+        padding: 5px;
+        overflow-y: scroll;
       }
       
-      /* Clear floats after the columns */
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
 
       header {
         color: hotpink;
@@ -35,6 +29,23 @@ footer{
         border: 0.25vw red solid;
         text-align: center;
         justify-content: center;
+}
+
+#delete{
+        background-color: red;
+}
+
+fieldset.personal, fieldset.product{
+        background-color: gold;
+        border: 0.25vw red dashed;
+        width: fit-content;
+}
+
+
+legend {
+        background-color: red;
+        color: blue;
+        padding: 3px 6px;
 }
 
 a{

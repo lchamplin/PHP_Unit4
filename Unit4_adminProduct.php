@@ -16,39 +16,26 @@
   <div class="column">
           <?php
         $conn = getConnection();
-        $products = getProductTable($conn);
-
-        echo "<br>";
-        echo "<h3> Products </h3>";
-        echo "<table border='1'>
-        <tr>
-        <th>Product</th>
-        <th>Image</th>
-        <th>Quantity</th>
-        <th>Price</th>
-        <th>Inactive?</th>
-        </tr>";
-
-        while($row = mysqli_fetch_array($products))
-        {
-        echo "<tr>";
-        echo "<td>" . $row['product_name'] . "</td>";
-        echo "<td>" . $row['image_name'] . "</td>";
-        echo "<td>" . $row['in_stock'] . "</td>";
-        echo "<td>" . $row['price'] . "</td>";
-        if ($row['inactive']==1){
-                echo "<td>" . "yes ". "</td>";
-        }
-        else{
-                echo "<td>" . "</td>";
-        }
-        echo "</tr>";
-        }
-        echo "</table>";
+        getProductTableHTML($conn)
         ?>
   </div>
-  <div class="column">
 
+  <div class="column">
+<form>
+   <fieldset class="product">
+    <legend>Product Info</legend>
+                Product Name: * <input type="text" name="name" id="name" required><br>
+                Product Image: * <input type="text" name="image" id="image" required><br>
+                Quantity: <input type="number" name="quantity" id="quantity" min=0 value=0><br>
+                Price:  <input type="number" name="price" id="price" min=0 value=0><br>
+                Make Inactive: <input type="checkbox" name="inactive" id="inactive"><br>
+        </fieldset>
+        <form>
+                <span>
+                        <button id="add">ADD<button>
+                        <button id="update">UPDATE<button>
+                        <button id="delete">DELETE<button>
+                </span>
   </div>
 </div> 
 </body>
