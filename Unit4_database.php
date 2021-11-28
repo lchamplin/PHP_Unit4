@@ -100,6 +100,14 @@ function addCustomer($conn, $first, $last, $email) {
         $stmt->close();
 }
 
+function addProduct($conn, $name, $image, $price, $quantity, $inactive) {
+        $query = "insert into Product (product_name, image_name, price, in_stock, inactive) values (?,?,?,?,?)";
+        $stmt = $conn->prepare( $query );
+        $stmt->bind_param("ssdii", $name, $image, $price, $quantity, $inactive);
+        $stmt->execute();
+        $stmt->close();
+}
+
 function updateQuantity($conn, $productId, $qty) {
         $query = "update Product set in_stock = ? where id = ?";
         $stmt = $conn->prepare( $query );
