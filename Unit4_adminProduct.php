@@ -20,7 +20,7 @@
         ?>
   </div>
 
-  <div class="column">
+  <!-- <div class="column">
 <form>
    <fieldset class="product">
     <legend>Product Info</legend>
@@ -36,7 +36,7 @@
                         <button id="update">UPDATE<button>
                         <button id="delete">DELETE<button>
                 </span>
-  </div>
+  </div> -->
 </div> 
 </body>
 </html>
