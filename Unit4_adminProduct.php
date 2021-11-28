@@ -12,6 +12,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+        <br>
+        <br>
 <div class="wrapper">
   <div class="column1">
           <?php
