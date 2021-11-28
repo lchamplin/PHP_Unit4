@@ -3,13 +3,13 @@ $(document).ready(function(){
 
         $("#add").click(function(e){
                 e.preventDefault();
-                dataString = checkFields();
+                dataString = checkFields()+"&action='add'";
                 if(dataString!=""){
-                        console.log("ajax reached")
+                        console.log("ajax reached", dataString)
                         $.ajax({
                                 type: "POST",
                                 url: "Unit4__order_ajax.php",
-                                data: dataString+"&action='add'",
+                                data: dataString,
                                 cache: false,
                                 success: function (result) {
                                         alert(result);

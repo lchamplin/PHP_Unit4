@@ -35,7 +35,7 @@
                 Make Inactive: <input type="checkbox" name="inactive" id="inactive"><br>
         </fieldset>
                 <span>
-                        <button id="add" type="submit" onclick="editDB('add')">ADD</button>
+                        <button id="add" type="submit">ADD</button>
                         <button id="update" type="submit" onclick="editDB('update')">UPDATE</button>
                         <button id="delete" type="submit" onclick="editDB('delete')">DELETE</button>
                 </span>
