@@ -5,6 +5,7 @@ $(document).ready(function(){
                 e.preventDefault();
                 dataString = checkFields();
                 if(dataString!=""){
+                        console.log("ajax reached")
                         $.ajax({
                                 type: "POST",
                                 url: "Unit4__order_ajax.php",

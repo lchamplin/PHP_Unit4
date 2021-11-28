@@ -51,19 +51,19 @@
 
 <script>
  
- function editDB(str) {
-                var xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {                                
-                        if (this.readyState == 4 && this.status == 200){
-                                document.getElementById("col1").innerHTML = 
-                                "<?php
-                                $conn = getConnection();
-                                echo getProductTableHTML($conn);
-                                ?>;"
-                        }
-                };
-                xhttp.open("GET", "Unit4_get_quantity.php?id="+str, true);
-                xhttp.send();
-        }
+//  function editDB(str) {
+//                 var xhttp = new XMLHttpRequest();
+//                 xhttp.onreadystatechange = function() {                                
+//                         if (this.readyState == 4 && this.status == 200){
+//                                 document.getElementById("col1").innerHTML = 
+//                                 "<?php
+//                                 $conn = getConnection();
+//                                 echo getProductTableHTML($conn);
+//                                 ?>;"
+//                         }
+//                 };
+//                 xhttp.open("GET", "Unit4_get_quantity.php?id="+str, true);
+//                 xhttp.send();
+//         }
 
 </script>
