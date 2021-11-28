@@ -7,6 +7,8 @@
         overflow-y: scroll;
       }
       .column2 {
+        float: right;
+        margin-right: 1px;
         width: 50%;
         padding: 5px;
       }
