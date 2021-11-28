@@ -33,9 +33,9 @@
         </fieldset>
 </form>
                 <span>
-                        <button id="add">ADD<button>
-                        <button id="update">UPDATE<button>
-                        <button id="delete">DELETE<button>
+                        <button id="add">ADD</button>
+                        <button id="update">UPDATE</button>
+                        <button id="delete">DELETE</button>
                 </span>
   </div>
 </div> 
