@@ -31,7 +31,7 @@
         {
         echo "<tr>";
         echo "<td>" . $row['product_name'] . "</td>";
-        echo "<td>" . $row['image'] . "</td>";
+        echo "<td>" . $row['image_name'] . "</td>";
         echo "<td>" . $row['in_stock'] . "</td>";
         echo "<td>" . $row['price'] . "</td>";
         echo "<td>" . $row['inactive'] . "</td>";
