@@ -161,14 +161,7 @@ function getProductTableHTML($conn){
 
         $table = $table . "<br>";
         $table = $table .  "<h3> Products </h3>";
-        $table = $table .  "<table border='1'>
-        <tr>
-        <th>Product</th>
-        <th>Image</th>
-        <th>Quantity</th>
-        <th>Price</th>
-        <th>Inactive?</th>
-        </tr>";
+        $table = $table .  "<table border='1'><tr><th>Product</th><th>Image</th><th>Quantity</th><th>Price</th><th>Inactive?</th></tr>";
 
         while($row = mysqli_fetch_array($products))
         {
