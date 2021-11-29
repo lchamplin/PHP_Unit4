@@ -8,7 +8,7 @@ $(document).ready(function(){
                         console.log("ajax reached", dataString)
                         $.ajax({
                                 type: "POST",
-                                url: "Unit4__order_ajax.php",
+                                url: "Unit4_order_ajax.php",
                                 data: dataString,
                                 cache: false,
                                 success: function (result) {

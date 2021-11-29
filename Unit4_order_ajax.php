@@ -20,6 +20,4 @@ if($action=="add"){
 }
 echo "Error";
 
-
-
 ?>
