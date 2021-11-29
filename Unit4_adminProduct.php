@@ -25,7 +25,7 @@
   </div>
 
   <div class="column2">
-<form action="Unit4_ajaxsubmit.php" method="post">
+<form action="Unit4_ajaxsubmit.php" method="post" id="form">
    <fieldset class="product">
     <legend>Product Info</legend>
                 Product Name: * <input type="text" name="name" id="name" required><br>

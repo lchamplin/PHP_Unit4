@@ -10,20 +10,22 @@ $name=$_POST['name'];
 $image=$_POST['image'];
 $quantity=$_POST['quantity'];
 $price=$_POST['price'];
-$inactive=$_POST['inactive'];
+$inactive=(int)$_POST['inactive'];
 $action=$_POST['action'];
 echo "got values"
 
-// if($action=="add"){
-//         addProduct($conn, $name, $image, $price, $quantity, $inactive);
-//         echo "Product added";
-// }else if($action=="update"){
-
-// }else if($action=="delete"){
+if($action=="add"){
+        addProduct($conn, $name, $image, $price, $quantity, $inactive);
+        echo "Product added";
+}
+// else if($action=="update"){
 
 // }
-// else{
-//         echo "Error";
+// else if($action=="delete"){
+
 // }
+else{
+        echo "Error";
+}
 
 ?>

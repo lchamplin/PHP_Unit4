@@ -13,6 +13,7 @@ $(document).ready(function(){
                                 cache: false,
                                 success: function (result) {
                                         alert(result);
+                                        document.getElementById('form').reset();
                                 }
                         });
                 }
@@ -75,10 +76,12 @@ $(document).ready(function(){
                 }
                 if (name == '') {
                         alert("Please provide product name");
+                        document.getElementById('name').focus();
                         return "";
                 }
                 if (image == '') {
                         alert("Please provide product image");
+                        document.getElementById('image').focus();
                         return "";
                 }
                 return "name=" + name + "&image=" + image + "&quantity=" + quantity + "&price=" + price + "&inactive=" + inactive;
