@@ -14,18 +14,18 @@ $inactive=(int)$_POST['inactive'];
 $action=$_POST['action'];
 echo "got values"
 
-if($action=="add"){
-        // addProduct($conn, $name, $image, $price, $quantity, $inactive);
-        echo "Product added";
-}
+// if($action=="add"){
+//         // addProduct($conn, $name, $image, $price, $quantity, $inactive);
+//         echo "Product added";
+// }
 // else if($action=="update"){
 
 // }
 // else if($action=="delete"){
 
 // }
-else{
-        echo "Error";
-}
+// else{
+//         echo "Error";
+// }
 
 ?>
