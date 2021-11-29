@@ -20,6 +20,46 @@ $(document).ready(function(){
                         return
                 }
         });
+
+        $("#update").click(function(e){
+                e.preventDefault();
+                dataString = checkFields()+"&action=update";
+                if(dataString!=""){
+                        console.log("ajax reached", dataString)
+                        $.ajax({
+                                type: "POST",
+                                url: "Unit4_order_ajax.php",
+                                data: dataString,
+                                cache: false,
+                                success: function (result) {
+                                        alert(result);
+                                }
+                        });
+                }
+                else{
+                        return
+                }
+        });
+
+        $("#delete").click(function(e){
+                e.preventDefault();
+                dataString = checkFields()+"&action=delete";
+                if(dataString!=""){
+                        console.log("ajax reached", dataString)
+                        $.ajax({
+                                type: "POST",
+                                url: "Unit4_order_ajax.php",
+                                data: dataString,
+                                cache: false,
+                                success: function (result) {
+                                        alert(result);
+                                }
+                        });
+                }
+                else{
+                        return
+                }
+        });
         
         function checkFields() {
                 var name = $("#name").val();

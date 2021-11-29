@@ -6,18 +6,24 @@ include 'Unit4_database.php';
 
 $conn = getConnection();
 echo "got connection"
-//Fetching Values from URL
-$name=$_POST['name'];
-$image=$_POST['image'];
-$quantity=$_POST['quantity'];
-$price=$_POST['price'];
-$inactive=$_POST['inactive'];
-$action=$_POST['action'];
+// //Fetching Values from URL
+// $name=$_POST['name'];
+// $image=$_POST['image'];
+// $quantity=$_POST['quantity'];
+// $price=$_POST['price'];
+// $inactive=$_POST['inactive'];
+// $action=$_POST['action'];
 
-if($action=="add"){
-        addProduct($conn, $name, $image, $price, $quantity, $inactive);
-        echo "Product added";
-}
-echo "Error";
+// if($action=="add"){
+//         addProduct($conn, $name, $image, $price, $quantity, $inactive);
+//         echo "Product added";
+// }else if($action=="update"){
+
+// }else if($action=="delete"){
+
+// }
+// else{
+//         echo "Error";
+// }
 
 ?>
