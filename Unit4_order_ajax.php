@@ -15,7 +15,7 @@ $action=$_POST['action'];
 echo "got values"
 
 if($action=="add"){
-        addProduct($conn, $name, $image, $price, $quantity, $inactive);
+        // addProduct($conn, $name, $image, $price, $quantity, $inactive);
         echo "Product added";
 }
 // else if($action=="update"){
