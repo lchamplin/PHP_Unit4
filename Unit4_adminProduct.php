@@ -19,7 +19,7 @@
   <div class="column1" id="col1">
           <?php
         $conn = getConnection();
-        echo getProductTableHTML($conn);
+        // echo getProductTableHTML($conn);
         ?>
         <br>
   </div>
@@ -37,8 +37,8 @@
         </fieldset>
                 <span>
                         <button id="add" type="submit">ADD</button>
-                        <button id="update" type="submit" onclick="editDB('update')">UPDATE</button>
-                        <button id="delete" type="submit" onclick="editDB('delete')">DELETE</button>
+                        <button id="update" type="submit">UPDATE</button>
+                        <button id="delete" type="submit">DELETE</button>
                 </span>
 </form>
   </div>
@@ -52,44 +52,44 @@
 
 <script>
  
- function highlight_row() {
-    var table = document.getElementById('display-table');
-    var cells = table.getElementsByTagName('td');
+//  function highlight_row() {
+//     var table = document.getElementById('display-table');
+//     var cells = table.getElementsByTagName('td');
 
-    for (var i = 0; i < cells.length; i++) {
-        // Take each cell
-        var cell = cells[i];
-        // do something on onclick event for cell
-        cell.onclick = function () {
-            // Get the row id where the cell exists
-            var rowId = this.parentNode.rowIndex;
+//     for (var i = 0; i < cells.length; i++) {
+//         // Take each cell
+//         var cell = cells[i];
+//         // do something on onclick event for cell
+//         cell.onclick = function () {
+//             // Get the row id where the cell exists
+//             var rowId = this.parentNode.rowIndex;
 
-            var rowsNotSelected = table.getElementsByTagName('tr');
-            for (var row = 0; row < rowsNotSelected.length; row++) {
-                rowsNotSelected[row].style.backgroundColor = "";
-                rowsNotSelected[row].classList.remove('selected');
-            }
-            var rowSelected = table.getElementsByTagName('tr')[rowId];
-            rowSelected.style.backgroundColor = "yellow";
-            rowSelected.className += " selected";
+//             var rowsNotSelected = table.getElementsByTagName('tr');
+//             for (var row = 0; row < rowsNotSelected.length; row++) {
+//                 rowsNotSelected[row].style.backgroundColor = "";
+//                 rowsNotSelected[row].classList.remove('selected');
+//             }
+//             var rowSelected = table.getElementsByTagName('tr')[rowId];
+//             rowSelected.style.backgroundColor = "yellow";
+//             rowSelected.className += " selected";
 
-            document.getElementById("name").value = rowSelected.cells[0].innerHTML;
-            document.getElementById("image").value = rowSelected.cells[1].innerHTML;
-            document.getElementById("quantity").value = rowSelected.cells[2].innerHTML;
-            document.getElementById("price").value = rowSelected.cells[3].innerHTML;
-            //console.log(rowSelected.cells[4].innerHTML.trim());
-            if (rowSelected.cells[4].innerHTML.trim() == "yes"){
-                document.getElementById("inactive").checked = true;
-            }
-            else{
-                document.getElementById("inactive").checked= false;
-            }
-            document.getElementById("id").value = rowSelected.cells[5].innerHTML;
+//             document.getElementById("name").value = rowSelected.cells[0].innerHTML;
+//             document.getElementById("image").value = rowSelected.cells[1].innerHTML;
+//             document.getElementById("quantity").value = rowSelected.cells[2].innerHTML;
+//             document.getElementById("price").value = rowSelected.cells[3].innerHTML;
+//             //console.log(rowSelected.cells[4].innerHTML.trim());
+//             if (rowSelected.cells[4].innerHTML.trim() == "yes"){
+//                 document.getElementById("inactive").checked = true;
+//             }
+//             else{
+//                 document.getElementById("inactive").checked= false;
+//             }
+//             document.getElementById("id").value = rowSelected.cells[5].innerHTML;
 
-        }
-    }
+//         }
+//     }
 
-}
+// }
 
 // highlight_row();
 </script>
