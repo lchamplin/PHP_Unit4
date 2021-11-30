@@ -76,7 +76,7 @@
             document.getElementById("image").value = rowSelected.cells[1].innerHTML;
             document.getElementById("quantity").value = rowSelected.cells[2].innerHTML;
             document.getElementById("price").value = rowSelected.cells[3].innerHTML;
-            console.log(rowSelected.cells[4]);
+            console.log(rowSelected.cells[4].innerHTML);
             if (rowSelected.cells[4].innerHTML == "yes"){
                 document.getElementById("inactive").value = true;
             }
