@@ -25,6 +25,7 @@
   </div>
 
   <div class="column2">
+          <p id="error" style="color:red"></p>
 <form action="Unit4_ajaxsubmit.php" method="post" id="form">
    <fieldset class="product">
     <legend>Product Info</legend>

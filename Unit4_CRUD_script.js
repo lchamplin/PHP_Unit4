@@ -13,6 +13,7 @@ $(document).ready(function(){
                                 cache: false,
                                 success: function (result) {
                                         document.getElementById('col1').innerHTML = result;
+                                        document.getElementById('error').innerHTML = "";
                                         document.getElementById('form').reset();
                                         alert("Product added")
                                 }
@@ -36,6 +37,7 @@ $(document).ready(function(){
                                 cache: false,
                                 success: function (result) {
                                         document.getElementById('col1').innerHTML = result;
+                                        document.getElementById('error').innerHTML = "";
                                         document.getElementById('form').reset();
                                         alert("Product updated")
                                 }
@@ -73,6 +75,7 @@ $(document).ready(function(){
                                                                 success: function (result) {
                                                                         document.getElementById('col1').innerHTML = result;
                                                                         document.getElementById('form').reset();
+                                                                        document.getElementById('error').innerHTML = "";
                                                                         // alert("Product deleted")
                                                                 
                                                                 }
@@ -103,11 +106,13 @@ $(document).ready(function(){
                 if (name == '') {
                         alert("Please provide product name");
                         document.getElementById('name').focus();
+                        document.getElementById('error').innerHTML = "Must specify a product name";
                         return "";
                 }
                 if (image == '') {
                         alert("Please provide product image");
                         document.getElementById('image').focus();
+                        document.getElementById('error').innerHTML = "Must specify a product image";
                         return "";
                 }
                 return "name=" + name + "&image=" + image + "&quantity=" + quantity + "&price=" + price + "&inactive=" + inactive;
