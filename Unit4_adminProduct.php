@@ -33,6 +33,7 @@
                 Quantity: <input type="number" name="quantity" id="quantity" min=0><br>
                 Price:  <input type="number" name="price" id="price" min=0><br>
                 Make Inactive: <input type="checkbox" name="inactive" id="inactive"><br>
+                <input type="number" name="id" id="id" hidden>
         </fieldset>
                 <span>
                         <button id="add" type="submit">ADD</button>
@@ -76,14 +77,15 @@
             document.getElementById("image").value = rowSelected.cells[1].innerHTML;
             document.getElementById("quantity").value = rowSelected.cells[2].innerHTML;
             document.getElementById("price").value = rowSelected.cells[3].innerHTML;
-            console.log(rowSelected.cells[4].innerHTML.trim());
+            //console.log(rowSelected.cells[4].innerHTML.trim());
             if (rowSelected.cells[4].innerHTML.trim() == "yes"){
-                    console.log("yes")
                 document.getElementById("inactive").checked = true;
             }
             else{
                 document.getElementById("inactive").checked= false;
             }
+            document.getElementById("id").value = rowSelected.cells[5].innerHTML;
+
         }
     }
 

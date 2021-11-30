@@ -38,6 +38,21 @@ function findProductById($conn, $productId) {
         }
 }
 
+function findProductByName($conn, $name) {
+        $query = "select * from Product where product_name = ?";
+        $stmt = $conn->prepare( $query );
+        $stmt->bind_param("s", $name);
+        $stmt->execute();
+        $result = $stmt->get_result(); // get the mysqli result
+        if ($result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+                return $row['id'];
+        }
+        else {
+                return 0;
+        }
+}
+
 function findCustomer($conn, $email) {
         $query = "select * from Customer where email = ?";
         $stmt = $conn->prepare( $query );
@@ -192,6 +207,7 @@ function getProductTableHTML($conn){
         else{
                 $table = $table .  "<td>" . "</td>";
         }
+        $table $table . "<td style='display:none;'>" . $row['id'] . "</td>"; 
         $table = $table .  "</tr>";
         }
         $table = $table .  "</table>";

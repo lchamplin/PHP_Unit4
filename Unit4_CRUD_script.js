@@ -26,6 +26,7 @@ $(document).ready(function(){
         $("#update").click(function(e){
                 e.preventDefault();
                 dataString = checkFields()+"&action=update";
+                dataString = dataString + "&id=" + $("#id").val();
                 if(dataString!=""){
                         console.log("ajax reached", dataString)
                         $.ajax({
@@ -46,6 +47,7 @@ $(document).ready(function(){
         $("#delete").click(function(e){
                 e.preventDefault();
                 dataString = checkFields()+"&action=delete";
+                dataString = dataString + "&id=" + $("#id").val();
                 if(dataString!=""){
                         console.log("ajax reached", dataString)
                         $.ajax({
