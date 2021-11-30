@@ -186,32 +186,32 @@ function getProductTable($conn) {
         return $result;
 }
 
-// function getProductTableHTML($conn){
-//         $products = getProductTable($conn);
-//         $table = "";
+function getProductTableHTML($conn){
+        $products = getProductTable($conn);
+        $table = "";
 
-//         $table = $table . "<br>";
-//         $table = $table .  "<h3> Products </h3>";
-//         $table = $table .  "<table id='display-table' border='1'><tr><th>Product</th><th>Image</th><th>Quantity</th><th>Price</th><th>Inactive?</th></tr>";
+        $table = $table . "<br>";
+        $table = $table .  "<h3> Products </h3>";
+        $table = $table .  "<table id='display-table' border='1'><tr><th>Product</th><th>Image</th><th>Quantity</th><th>Price</th><th>Inactive?</th></tr>";
 
-//         while($row = mysqli_fetch_array($products))
-//         {
-//                 $table = $table .  "<tr>";
-//                 $table = $table .  "<td>" . $row['product_name'] . "</td>";
-//                 $table = $table .  "<td>" . $row['image_name'] . "</td>";
-//                 $table = $table .  "<td>" . $row['in_stock'] . "</td>";
-//                 $table = $table .  "<td>" . $row['price'] . "</td>";
-//                 if ($row['inactive']==1){
-//                         $table = $table .  "<td>" . "yes ". "</td>";
-//                 }
-//                 else{
-//                         $table = $table .  "<td>" . "</td>";
-//                 }
-//                 $table = $table . "<td style='display:none;'>" . $row['id'] . "</td>"; 
-//                 $table = $table .  "</tr>";
-//         }
-//         $table = $table .  "</table>";
-//         return $table;
-// }
+        while($row = mysqli_fetch_array($products))
+        {
+                $table = $table .  "<tr>";
+                $table = $table .  "<td>" . $row['product_name'] . "</td>";
+                $table = $table .  "<td>" . $row['image_name'] . "</td>";
+                $table = $table .  "<td>" . $row['in_stock'] . "</td>";
+                $table = $table .  "<td>" . $row['price'] . "</td>";
+                if ($row['inactive']==1){
+                        $table = $table .  "<td>" . "yes ". "</td>";
+                }
+                else{
+                        $table = $table .  "<td>" . "</td>";
+                }
+                // $table = $table . "<td style='display:none;'>" . $row['id'] . "</td>"; 
+                $table = $table .  "</tr>";
+        }
+        $table = $table .  "</table>";
+        return $table;
+}
 
 ?> 
