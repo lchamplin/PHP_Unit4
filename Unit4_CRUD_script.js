@@ -3,8 +3,8 @@ $(document).ready(function(){
 
         $("#add").click(function(e){
                 e.preventDefault();
-                dataString = checkFields()+"&action=add";
                 if(dataString!="empty"){
+                        dataString = checkFields()+"&action=add";
                         console.log("ajax reached", dataString)
                         $.ajax({
                                 type: "POST",
@@ -25,9 +25,9 @@ $(document).ready(function(){
 
         $("#update").click(function(e){
                 e.preventDefault();
-                dataString = checkFields()+"&action=update";
-                dataString = dataString + "&id=" + $("#id").val();
                 if(dataString!="empty"){
+                        dataString = checkFields()+"&action=update";
+                        dataString = dataString + "&id=" + $("#id").val();
                         console.log("ajax reached", dataString)
                         $.ajax({
                                 type: "POST",
@@ -48,9 +48,9 @@ $(document).ready(function(){
 
         $("#delete").click(function(e){
                 e.preventDefault();
-                dataString = checkFields() + "&id=" + $("#id").val();
-                dataString = dataString+"&action=delete_check";
                 if(dataString!="empty"){
+                        dataString = checkFields() + "&id=" + $("#id").val();
+                        dataString = dataString+"&action=delete_check";
                         console.log("ajax reached", dataString)
                         $.ajax({
                                 type: "POST",
@@ -102,13 +102,11 @@ $(document).ready(function(){
                         inactive = 0;
                 }
                 if (name == '') {
-                        alert("Please provide product name");
                         document.getElementById('name').focus();
                         document.getElementById('error').innerHTML = "Must specify a product name";
                         return "empty";
                 }
                 if (image == '') {
-                        alert("Please provide product image");
                         document.getElementById('image').focus();
                         document.getElementById('error').innerHTML = "Must specify a product image";
                         return "empty";
