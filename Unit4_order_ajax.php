@@ -27,10 +27,10 @@ if($action="delete_check"){
         
                 $exists = getProductOrders($conn, $id);
                 if ($exists==1){
-                        echo "true";
+                        echo 1;
                 }
                 else{
-                        echo "false";
+                        echo 0;
                 }
 
 }

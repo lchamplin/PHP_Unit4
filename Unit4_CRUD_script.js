@@ -58,14 +58,12 @@ $(document).ready(function(){
                                 data: dataString,
                                 cache: false,
                                 success: function (result) {
-                                        // document.getElementById('col1').innerHTML = result;
-                                        // document.getElementById('form').reset();
-                                        // alert("Product deleted")
-                                        if (result == "true"){
+                                        console.log(result);
+                                        if (result == 1){
                                                 alert('Cannot delete--there are orders for this product');
                                         }else{
                                                 if(confirm('Are you sure you want to delete this product?')){
-                                                        dataString = dataString.substring(0, str.length - 12) + "delete";
+                                                        dataString = dataString.substring(0, dataString.length - 12) + "delete";
                                                         $.ajax({
                                                                 type: "POST",
                                                                 url: "Unit4_order_ajax.php",
