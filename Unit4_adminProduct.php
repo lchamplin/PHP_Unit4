@@ -50,7 +50,8 @@
 
 
 
-<script>
+<script> 
+
  
  function highlight_row() {
     var table = document.getElementById('display-table');

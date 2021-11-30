@@ -48,8 +48,8 @@ $(document).ready(function(){
 
         $("#delete").click(function(e){
                 e.preventDefault();
-                dataString = checkFields()+"&action=delete";
-                dataString = dataString + "&id=" + $("#id").val();
+                dataString = checkFields() + "&id=" + $("#id").val();
+                dataString = dataString+"&action=delete_check";
                 if(dataString!=""){
                         console.log("ajax reached", dataString)
                         $.ajax({
@@ -58,9 +58,29 @@ $(document).ready(function(){
                                 data: dataString,
                                 cache: false,
                                 success: function (result) {
-                                        document.getElementById('col1').innerHTML = result;
-                                        document.getElementById('form').reset();
+                                        // document.getElementById('col1').innerHTML = result;
+                                        // document.getElementById('form').reset();
                                         // alert("Product deleted")
+                                        if (result == "true"){
+                                                alert('Cannot delete--there are orders for this product');
+                                        }else{
+                                                if(confirm('Are you sure you want to delete this product?')){
+                                                        dataString = dataString.substring(0, str.length - 12) + "delete";
+                                                        $.ajax({
+                                                                type: "POST",
+                                                                url: "Unit4_order_ajax.php",
+                                                                data: dataString,
+                                                                cache: false,
+                                                                success: function (result) {
+                                                                        document.getElementById('col1').innerHTML = result;
+                                                                        document.getElementById('form').reset();
+                                                                        // alert("Product deleted")
+                                                                
+                                                                }
+                                                        });
+
+                                                }
+                                        }
                                 }
                         });
                 }
