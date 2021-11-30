@@ -207,7 +207,7 @@ function getProductTableHTML($conn){
         else{
                 $table = $table .  "<td>" . "</td>";
         }
-        $table $table . "<td style='display:none;'>" . $row['id'] . "</td>"; 
+        $table = $table . "<td style='display:none;'>" . $row['id'] . "</td>"; 
         $table = $table .  "</tr>";
         }
         $table = $table .  "</table>";
