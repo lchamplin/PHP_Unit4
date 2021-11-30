@@ -12,8 +12,9 @@ $(document).ready(function(){
                                 data: dataString,
                                 cache: false,
                                 success: function (result) {
-                                        alert(result);
+                                        document.getElementById('col1').innerHTML = result;
                                         document.getElementById('form').reset();
+                                        alert("Product added")
                                 }
                         });
                 }
