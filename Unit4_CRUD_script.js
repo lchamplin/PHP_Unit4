@@ -1,9 +1,10 @@
-        
+$(document).onchange(function(){
+
+})     
 $(document).ready(function(){
 
         $("#add").click(function(e){
                 e.preventDefault();
-                highlight_row();
                 dataString=checkFields();
                 if(dataString!="empty"){
                         dataString = dataString+"&action=add";
@@ -20,14 +21,12 @@ $(document).ready(function(){
                                 }
                         });
                 }
-                else{
-                        return
-                }
+                highlight_row();
+                return;
         });
 
         $("#update").click(function(e){
                 e.preventDefault();
-                highlight_row();
                 dataString=checkFields();
                 if(dataString!="empty"){
                         dataString = dataString+"&action=update";
@@ -45,14 +44,12 @@ $(document).ready(function(){
                                 }
                         });
                 }
-                else{
-                        return
-                }
+                highlight_row();
+                return;
         });
 
         $("#delete").click(function(e){
                 e.preventDefault();
-                highlight_row();
                 dataString=checkFields();
                 if(dataString!="empty"){
                         dataString = dataString + "&id=" + $("#id").val();
@@ -90,9 +87,8 @@ $(document).ready(function(){
                                 }
                         });
                 }
-                else{
-                        return
-                }
+                highlight_row();
+                return;
         });
         
         function checkFields() {
