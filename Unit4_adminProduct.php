@@ -79,10 +79,10 @@
             console.log(rowSelected.cells[4].innerHTML.trim());
             if (rowSelected.cells[4].innerHTML.trim() == "yes"){
                     console.log("yes")
-                document.getElementById("inactive").value = true;
+                document.getElementById("inactive").checked = true;
             }
             else{
-                document.getElementById("inactive").value= false;
+                document.getElementById("inactive").checked= false;
             }
         }
     }
