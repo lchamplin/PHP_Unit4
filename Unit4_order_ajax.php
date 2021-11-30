@@ -26,7 +26,7 @@ if($action=="delete"){
         $id=(int)$_POST['id'];
 
         $exists = getProductOrders($conn, $id);
-        if (exists==1){
+        if ($exists==1){
                 echo "alert('Cannot delete--there are orders for this product')";
         }
         else{
@@ -35,7 +35,6 @@ if($action=="delete"){
                 echo getProductTableHTML($conn);
 
         }
-        echo "<p>delete</p>";
 }
 
 
