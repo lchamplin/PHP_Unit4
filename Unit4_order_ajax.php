@@ -22,14 +22,12 @@ if($action=="update"){
         updateProductById($conn, $id, $name, $image, $price, $quantity, $inactive);
         echo getProductTableHTML($conn);
 }
-// else if($action=="delete"){
-//         $id=(int)$_POST['id'];
-//         deleteProductById($conn, $id);
-//         echo getProductTableHTML($conn);
+if($action=="delete"){
+        $id=(int)$_POST['id'];
+        deleteProductById($conn, $id);
+        echo getProductTableHTML($conn);
+}
 
-// }
-
-// echo "Error";
 
 
 ?>
