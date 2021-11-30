@@ -17,6 +17,8 @@ $(document).ready(function(){
                                         document.getElementById('col1').innerHTML = result;
                                         document.getElementById('error').innerHTML = "";
                                         document.getElementById('form').reset();
+                                        highlight_row();
+                                        console.log("highlight row just called");
                                 }
                         });
                 }
@@ -40,6 +42,8 @@ $(document).ready(function(){
                                         document.getElementById('col1').innerHTML = result;
                                         document.getElementById('error').innerHTML = "";
                                         document.getElementById('form').reset();
+                                        highlight_row();
+                                        console.log("highlight row just called");
                                 }
                         });
                 }
@@ -79,6 +83,7 @@ $(document).ready(function(){
                                                                         document.getElementById('form').reset();
                                                                         document.getElementById('error').innerHTML = "";
                                                                         highlight_row();
+                                                                        console.log("highlight row just called");
                                                                         // alert("Product deleted")
                                                                 
                                                                 }
