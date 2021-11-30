@@ -27,13 +27,12 @@ if($action=="delete"){
 
         $exists = getProductOrders($conn, $id);
         if ($exists==1){
-                echo "alert('Cannot delete--there are orders for this product')";
+                echo alert('Cannot delete--there are orders for this product');
         }
         else{
 
                 deleteProductById($conn, $id);
                 echo getProductTableHTML($conn);
-
         }
 }
 
