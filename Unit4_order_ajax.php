@@ -25,16 +25,16 @@ if($action=="update"){
 if($action=="delete"){
         $id=(int)$_POST['id'];
 
-        exists = getProductOrders($conn, $id);
-        // if (exists){
-        //         echo "alert('Cannot delete--there are orders for this product')";
-        // }
-        // else{
+        $exists = getProductOrders($conn, $id);
+        if (exists){
+                echo "alert('Cannot delete--there are orders for this product')";
+        }
+        else{
 
-        //         deleteProductById($conn, $id);
-        //         echo getProductTableHTML($conn);
+                deleteProductById($conn, $id);
+                echo getProductTableHTML($conn);
 
-        // }
+        }
         echo "<p>delete</p>";
 }
 
