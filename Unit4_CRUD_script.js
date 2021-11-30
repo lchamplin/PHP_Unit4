@@ -60,7 +60,7 @@ $(document).ready(function(){
                                 success: function (result) {
                                         document.getElementById('col1').innerHTML = result;
                                         document.getElementById('form').reset();
-                                        alert("Product deleted")
+                                        // alert("Product deleted")
                                 }
                         });
                 }
@@ -74,7 +74,7 @@ $(document).ready(function(){
                 var image = $("#image").val();
                 var quantity = $("#quantity").val();
                 var price = $("#price").val();
-                var inactive = $("#inactive").attr('checked');
+                var inactive = document.getElementById("inactive").checked;
                 if (inactive){
                         inactive = 1;
                 }

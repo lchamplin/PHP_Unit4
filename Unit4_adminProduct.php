@@ -82,7 +82,7 @@
                 document.getElementById("inactive").checked = true;
             }
             else{
-                document.getElementById("inactive").checked= false;
+                document.getElementById("inactive").checked = false;
             }
             document.getElementById("id").value = rowSelected.cells[5].innerHTML;
 

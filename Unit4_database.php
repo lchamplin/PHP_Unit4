@@ -97,6 +97,20 @@ function findOrder($conn, $custId, $productId, $timestamp) {
         }
 }
 
+function getProductOrders($conn, $productId){
+        $query = "select * from Orders where product_id = ?";
+        $stmt = $conn->prepare( $query );
+        $stmt->bind_param("i", $productId);
+        $stmt->execute();
+        $result = $stmt->get_result(); 
+        if ($result->num_rows > 0) {
+                return true;
+        }
+        else {
+                return false;
+        }
+}
+
 function addOrder($conn, $custId, $productId, $qty, $price, $tax, $donation, $total, $timestamp) {
         if(! findOrder($conn, $custId, $productId, $timestamp)){
                 $query = "insert into Orders (product_id, customer_id, quantity, price, tax, donation, total, timestamp) values (?,?,?,?,?,?,?,?)";
