@@ -103,11 +103,12 @@ function getProductOrders($conn, $productId){
         $stmt->bind_param("i", $productId);
         $stmt->execute();
         $result = $stmt->get_result(); 
+        $stmt->close();
         if ($result->num_rows > 0) {
-                return true;
+                return 1;
         }
         else {
-                return false;
+                return 0;
         }
 }
 
