@@ -18,7 +18,7 @@ $(document).ready(function(){
                                         document.getElementById('error').innerHTML = "";
                                         document.getElementById('form').reset();
                                         highlight_row();
-                                        console.log("highlight row just called");
+                                        // console.log("highlight row just called");
                                 }
                         });
                 }
@@ -43,7 +43,7 @@ $(document).ready(function(){
                                         document.getElementById('error').innerHTML = "";
                                         document.getElementById('form').reset();
                                         highlight_row();
-                                        console.log("highlight row just called");
+                                        // console.log("highlight row just called");
                                 }
                         });
                 }
@@ -83,7 +83,7 @@ $(document).ready(function(){
                                                                         document.getElementById('form').reset();
                                                                         document.getElementById('error').innerHTML = "";
                                                                         highlight_row();
-                                                                        console.log("highlight row just called");
+                                                                        // console.log("highlight row just called");
                                                                         // alert("Product deleted")
                                                                 
                                                                 }
@@ -131,7 +131,7 @@ $(document).ready(function(){
                     var cell = cells[i];
                     // do something on onclick event for cell
                     cell.onclick = function () {
-                            console.log("cell clicked");
+                        //     console.log("cell clicked");
                         // Get the row id where the cell exists
                         var rowId = this.parentNode.rowIndex;
             
