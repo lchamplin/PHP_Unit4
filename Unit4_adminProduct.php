@@ -33,7 +33,7 @@
                 Quantity: <input type="number" name="quantity" id="quantity" min=0><br>
                 Price:  <input type="number" name="price" id="price" min=0><br>
                 Make Inactive: <input type="checkbox" name="inactive" id="inactive"><br>
-                <input type="number" name="id" id="id" hidden>
+                <!-- <input type="number" name="id" id="id" hidden> -->
         </fieldset>
                 <span>
                         <button id="add" type="submit">ADD</button>
