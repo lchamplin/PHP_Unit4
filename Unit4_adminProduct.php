@@ -87,4 +87,6 @@
     }
 
 }
+
+highlight_row();
 </script>
