@@ -17,9 +17,10 @@
         <br>
 <div class="wrapper">
   <div class="column1" id="col1">
-  <table id="display-table" class="table-layout">
-    
-    </table>
+          <?php
+        $conn = getConnection();
+        echo getProductTableHTML($conn);
+        ?>
         <br>
   </div>
 
