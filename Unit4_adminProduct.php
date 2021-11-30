@@ -91,5 +91,5 @@
 
 }
 
-highlight_row();
+// highlight_row();
 </script>

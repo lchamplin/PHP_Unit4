@@ -201,14 +201,14 @@ function getProductTableHTML($conn){
                 $table = $table .  "<td>" . $row['image_name'] . "</td>";
                 $table = $table .  "<td>" . $row['in_stock'] . "</td>";
                 $table = $table .  "<td>" . $row['price'] . "</td>";
-        if ($row['inactive']==1){
-                $table = $table .  "<td>" . "yes ". "</td>";
-        }
-        else{
-                $table = $table .  "<td>" . "</td>";
-        }
-        $table = $table . "<td style='display:none;'>" . $row['id'] . "</td>"; 
-        $table = $table .  "</tr>";
+                if ($row['inactive']==1){
+                        $table = $table .  "<td>" . "yes ". "</td>";
+                }
+                else{
+                        $table = $table .  "<td>" . "</td>";
+                }
+                $table = $table . "<td style='display:none;'>" . $row['id'] . "</td>"; 
+                $table = $table .  "</tr>";
         }
         $table = $table .  "</table>";
         return $table;
