@@ -14,11 +14,12 @@ $inactive=(int)$_POST['inactive'];
 $action=$_POST['action'];
 
 if($action=="add"){
+        echo "add";
         addProduct($conn, $name, $image, $price, $quantity, $inactive);
-        echo getProductTableHTML($conn);
+        // echo getProductTableHTML($conn);
 }
 else if($action=="update"){
-        echo "update"
+        echo "update";
         $id=(int)$_POST['id'];
         updateProductById($conn, $id, $name, $image, $price, $quantity, $inactive)
         // echo getProductTableHTML($conn);
