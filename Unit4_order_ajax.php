@@ -19,8 +19,9 @@ if($action=="add"){
 }
 else if($action=="update"){
         $id=(int)$_POST['id'];
+        echo "update"
         updateProductById($conn, $id, $name, $image, $price, $quantity, $inactive)
-        echo getProductTableHTML($conn);
+        // echo getProductTableHTML($conn);
 }
 else if($action=="delete"){
         $id=(int)$_POST['id'];
