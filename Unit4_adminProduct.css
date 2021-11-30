@@ -24,6 +24,27 @@
 }
 
 
+
+.selected {
+  color: red;
+  background-color: yellow;
+}
+
+.table-layout {
+        text-align: center;
+        border: 1px solid black;
+        border-collapse: collapse;
+        font-family:"Trebuchet MS";
+        margin: 0 auto 0;
+    }
+    .table-layout td, .table-layout th {
+        border: 1px solid grey;
+        padding: 5px 5px 0;
+    }
+    .table-layout td {
+        text-align: left;
+    }
+
 legend {
         background-color: red;
         color: blue;
