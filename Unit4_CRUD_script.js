@@ -63,6 +63,8 @@ $(document).ready(function(){
                                         // console.log(result);
                                         if (result == 1){
                                                 alert('Cannot delete--there are orders for this product');
+                                                document.getElementById('form').reset();
+                                                document.getElementById('error').innerHTML = "";
                                         }else{
                                                 if(confirm('Are you sure you want to delete this product?')){
                                                         dataString = dataString.substring(0, dataString.length - 12) + "delete";
@@ -76,6 +78,7 @@ $(document).ready(function(){
                                                                         document.getElementById('col1').innerHTML = result;
                                                                         document.getElementById('form').reset();
                                                                         document.getElementById('error').innerHTML = "";
+                                                                        highlight_row();
                                                                         // alert("Product deleted")
                                                                 
                                                                 }
@@ -86,8 +89,6 @@ $(document).ready(function(){
                                 }
                         });
                 }
-                highlight_row();
-                return;
         });
         
         function checkFields() {
