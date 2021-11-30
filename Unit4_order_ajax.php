@@ -34,15 +34,10 @@ if($action="delete_check"){
                 }
 
 }
-
-
 if($action=="delete"){
         $id=(int)$_POST['id'];
-
-        deleteProductById($conn, $id);
-                     
-        echo getProductTableHTML($conn);
-        
+        deleteProductById($conn, $id);          
+        echo getProductTableHTML($conn);  
 }
 
 
