@@ -131,21 +131,21 @@ function updateQuantity($conn, $productId, $qty) {
         $stmt->close();
 }
 
-function updateProductById($conn, $productId, $name, $image, $price, $quantity, $inactive) {
-        $query = "update Product set product_name = ?, image_name = ?, price = ?, in_stock = ?, inactive = ? where id = ?";
-        $stmt = $conn->prepare( $query );
-        $stmt->bind_param("ssdiii", $name, $image, $price, $quantity, $inactive, $productId);
-        $stmt->execute();
-        $stmt->close();
-}
+// function updateProductById($conn, $productId, $name, $image, $price, $quantity, $inactive) {
+//         $query = "update Product set product_name = ?, image_name = ?, price = ?, in_stock = ?, inactive = ? where id = ?";
+//         $stmt = $conn->prepare( $query );
+//         $stmt->bind_param("ssdiii", $name, $image, $price, $quantity, $inactive, $productId);
+//         $stmt->execute();
+//         $stmt->close();
+// }
 
-function deleteProductById($conn, $productId) {
-        $query = "delete from Product where id = ?";
-        $stmt = $conn->prepare( $query );
-        $stmt->bind_param("i", $productId);
-        $stmt->execute();
-        $stmt->close();
-}
+// function deleteProductById($conn, $productId) {
+//         $query = "delete from Product where id = ?";
+//         $stmt = $conn->prepare( $query );
+//         $stmt->bind_param("i", $productId);
+//         $stmt->execute();
+//         $stmt->close();
+// }
 
 function getQuantity($conn, $productId) {
         $query = "select in_stock from Product where id =?";
