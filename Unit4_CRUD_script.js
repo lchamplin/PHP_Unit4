@@ -4,7 +4,7 @@ $(document).ready(function(){
         $("#add").click(function(e){
                 e.preventDefault();
                 dataString = checkFields()+"&action=add";
-                if(dataString!=""){
+                if(dataString!="empty"){
                         console.log("ajax reached", dataString)
                         $.ajax({
                                 type: "POST",
@@ -15,7 +15,6 @@ $(document).ready(function(){
                                         document.getElementById('col1').innerHTML = result;
                                         document.getElementById('error').innerHTML = "";
                                         document.getElementById('form').reset();
-                                        alert("Product added")
                                 }
                         });
                 }
@@ -28,7 +27,7 @@ $(document).ready(function(){
                 e.preventDefault();
                 dataString = checkFields()+"&action=update";
                 dataString = dataString + "&id=" + $("#id").val();
-                if(dataString!=""){
+                if(dataString!="empty"){
                         console.log("ajax reached", dataString)
                         $.ajax({
                                 type: "POST",
@@ -39,7 +38,6 @@ $(document).ready(function(){
                                         document.getElementById('col1').innerHTML = result;
                                         document.getElementById('error').innerHTML = "";
                                         document.getElementById('form').reset();
-                                        alert("Product updated")
                                 }
                         });
                 }
@@ -52,7 +50,7 @@ $(document).ready(function(){
                 e.preventDefault();
                 dataString = checkFields() + "&id=" + $("#id").val();
                 dataString = dataString+"&action=delete_check";
-                if(dataString!=""){
+                if(dataString!="empty"){
                         console.log("ajax reached", dataString)
                         $.ajax({
                                 type: "POST",
@@ -107,13 +105,13 @@ $(document).ready(function(){
                         alert("Please provide product name");
                         document.getElementById('name').focus();
                         document.getElementById('error').innerHTML = "Must specify a product name";
-                        return "";
+                        return "empty";
                 }
                 if (image == '') {
                         alert("Please provide product image");
                         document.getElementById('image').focus();
                         document.getElementById('error').innerHTML = "Must specify a product image";
-                        return "";
+                        return "empty";
                 }
                 return "name=" + name + "&image=" + image + "&quantity=" + quantity + "&price=" + price + "&inactive=" + inactive;
 
