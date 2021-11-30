@@ -22,7 +22,7 @@ if($action=="update"){
         updateProductById($conn, $id, $name, $image, $price, $quantity, $inactive);
         echo getProductTableHTML($conn);
 }
-if($action="delete_check"){
+if($action=="delete_check"){
                 $id=(int)$_POST['id'];
         
                 $exists = getProductOrders($conn, $id);
