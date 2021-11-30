@@ -118,6 +118,7 @@ $(document).ready(function(){
         }
 
         function highlight_row() {
+                console.log("highlight row called");
                 var table = document.getElementById('display-table');
                 var cells = table.getElementsByTagName('td');
             
