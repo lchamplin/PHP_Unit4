@@ -10,7 +10,7 @@
 	<meta name="author" content="Lauren Champlin">
 	<link rel="stylesheet" href="Unit4_adminProduct.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="Unit4_CRUD_script.js"></script>
+        <!-- <script src="Unit4_CRUD_script.js"></script> -->
 </head>
 <body>
         <br>
