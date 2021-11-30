@@ -18,8 +18,8 @@ if($action=="add"){
         echo getProductTableHTML($conn);
 }
 if($action=="update"){
-        echo "update";
-        // $id=(int)$_POST['id'];
+        $id=(int)$_POST['id'];
+        echo "update" . $id;
         // updateProductById($conn, $id, $name, $image, $price, $quantity, $inactive)
         // echo getProductTableHTML($conn);
 }
@@ -30,7 +30,7 @@ if($action=="update"){
 
 // }
 
-echo "Error";
+// echo "Error";
 
 
 ?>
