@@ -97,10 +97,11 @@ function findOrder($conn, $custId, $productId, $timestamp) {
         }
 }
 
-function getProductOrders($conn, $product_id){
-        $stmt = $conn->prepare('SELECT * from orders where product_id=?');
-        $stmt->bind_param("i", $product_id);
-        $stmt->execute;
+function getProductOrders($conn, $productId){
+        $query = "select * from Orders where product_id = ?";
+        $stmt = $conn->prepare( $query );
+        $stmt->bind_param("i", $productId);
+        $stmt->execute();
         $result = $stmt->get_result(); 
         $stmt->close();
         if ($result->num_rows > 0) {
