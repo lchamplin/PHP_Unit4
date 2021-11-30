@@ -1,6 +1,5 @@
-$(document).onchange(function(){
 
-})     
+  
 $(document).ready(function(){
 
         $("#add").click(function(e){
