@@ -52,7 +52,7 @@
 <script>
  
  function highlight_row() {
-    var table = document.getElementById('display-table');
+    var table = document.getElementById('col1');
     var cells = table.getElementsByTagName('td');
 
     for (var i = 0; i < cells.length; i++) {
@@ -72,13 +72,17 @@
             rowSelected.style.backgroundColor = "yellow";
             rowSelected.className += " selected";
 
-        //     msg = 'The ID of the company is: ' + rowSelected.cells[0].innerHTML;
-        //     msg += '\nThe cell value is: ' + this.innerHTML;
-        //     alert(msg);
-
-            document.getElementById("fname").value = rowSelected.cells[0].innerHTML;
-            document.getElementById("lname").value = rowSelected.cells[1].innerHTML;
-            document.getElementById("email").value = rowSelected.cells[2].innerHTML;
+            document.getElementById("name").value = rowSelected.cells[0].innerHTML;
+            document.getElementById("image").value = rowSelected.cells[1].innerHTML;
+            document.getElementById("quantity").value = rowSelected.cells[2].innerHTML;
+            document.getElementById("price").value = rowSelected.cells[3].innerHTML;
+            console.log(rowSelected.cells[4].innerHTML);
+            if (rowSelected.cells[4].innerHTML == "yes"){
+                document.getElementById("inactive").attr("checked") = true;
+            }
+            else{
+                document.getElementById("inactive").attr("checked") = false;
+            }
         }
     }
 
